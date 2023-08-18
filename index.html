@@ -10,6 +10,80 @@
 </head>
 
 <body>
+    <header>
+
+    </header>
+
+    <main>
+        <div class="flex flex-col lg:flex-row">
+            <!-- container -->
+            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <!-- 1st card -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure><img src="images/triangle.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">triangle</h2>
+                        <p>Area (A) = 0.5 x b x h</p>
+                        <p>
+                            <input type="text" placeholder="base" class="border bg-gray-200 text-xl w-24 px-2" name=""
+                                id="triangle-base">
+                            <span class="ml-2">cm</span>
+                            <input type="text" placeholder="height" class="ml-4 border bg-gray-200 text-xl w-24 px-2"
+                                name="" id="triangle-height">
+                            <span class="ml-2">cm</span>
+                        </p>
+                        <p class="text-2xl">Area: <span class="bold" id="triangle-area">0</span> cm<sup>2</sup></p>
+                        <div class="card-actions">
+                            <button class="btn btn-primary w-full" onclick="calculateTriangleArea()">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2nd card -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure><img src="images/rectangle.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Rectangle</h2>
+                        <p>Area (A) = w x l</p>
+                        <p>
+                            <input type="text" placeholder="width" class="border bg-gray-200 text-xl w-24 px-2" name=""
+                                id="rectangle-width">
+                            <span class="ml-2">cm</span>
+                            <input type="text" placeholder="length" class="ml-4 border bg-gray-200 text-xl w-24 px-2"
+                                name="" id="rectangle-length">
+                            <span class="ml-2">cm</span>
+                        </p>
+                        <p class="text-2xl">Area: <span class="bold" id="rectangle-area">0</span> cm<sup>2</sup></p>
+                        <div class="card-actions">
+                            <button class="btn btn-primary w-full" onclick="calculateRectangleArea()">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3rd card -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure><img src="images/triangle.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Shoes!</h2>
+                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- area calculator -->
+            <div class="w-[400px]">
+                <div class="text-4xl">Area Calculator</div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+    <script src="scripts/scripts-calculator.js"></script>
 
 </body>
 
