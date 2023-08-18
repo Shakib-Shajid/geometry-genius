@@ -15,6 +15,7 @@ function calculateTriangleArea() {
   const area = 0.5 * base * height;
   const areaSpan = document.getElementById("triangle-area");
   areaSpan.innerText = area;
+  addToCalculationEntry("Triangle", area);
 }
 
 function calculateRectangleArea() {
@@ -39,6 +40,7 @@ function calculateRectangleArea() {
   const area = width * length;
   const rectangleArea = document.getElementById("rectangle-area");
   rectangleArea.innerText = area;
+  addToCalculationEntry("Rectangle", area);
 }
 
 function calculateEllipseArea() {
@@ -48,6 +50,7 @@ function calculateEllipseArea() {
   const areaTwoDecimal = area.toFixed(2);
 
   setElementInnerText("ellipse-area", areaTwoDecimal);
+  addToCalculationEntry("Ellipse", area);
 }
 
 // reuseable function
@@ -60,6 +63,10 @@ function calculateParallelogramArea() {
   }
   const area = base * height;
   setElementInnerText("parallelogram-area", area);
+
+  //   add to calculation entry
+
+  addToCalculationEntry("parallelogram", area);
 }
 
 // reuseable get input function
@@ -75,4 +82,18 @@ function getInputValue(fieldId) {
 function setElementInnerText(elementId, area) {
   const element = document.getElementById(elementId);
   element.innerText = area;
+}
+
+// add to calculation enrty
+
+function addToCalculationEntry(areaType, area) {
+  const calculationEntry = document.getElementById("calculation-entry");
+  const count = calculationEntry.childElementCount;
+  const p = document.createElement("p");
+  p.classList.add("my-4");
+  //   p.innerHTML = areaType + " " + area;
+  p.innerHTML = `${
+    count + 1
+  }. ${areaType} ${area} cm<sup>2</sup> <button class="btn btn-secondary">Convert</button>`;
+  calculationEntry.appendChild(p);
 }
